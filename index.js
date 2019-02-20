@@ -18,13 +18,13 @@ function generateDropDownMenu() {
 }
 
 function logDogImages(selection) {
-    fetch('https://dog.ceo/api/breeds/image/random/'+ selection)
+    fetch(`https://dog.ceo/api/breeds/image/random/${selection}`)
         .then(response => response.json())
         .then(responseJson => console.log(responseJson));
 }
 
 function generateDogImages(selection) {
-    fetch('https://dog.ceo/api/breeds/image/random/'+ selection)
+    fetch(`https://dog.ceo/api/breeds/image/random/${selection}`)
         .then(response => response.json())
         .then(responseJson => renderDogImages(responseJson))
 }
@@ -54,12 +54,11 @@ function generateBreed(breedSelection) {
 }
 
 function renderBreedImages(responseJson) {
-    let html = `<img src="${responseJson.message}" alt="randomly generated dog breed image">`;
-    $('.breed-images').html(html);
+    $('.breed-images').html(`<img src="${responseJson.message}" alt="randomly generated dog breed image">`);
 }
 
 function generateError() {
-    $('.breed-images').html(`<img src="https://httpstatusdogs.com/img/404.jpg" alt="no dogs found error">`);
+    $('.breed-images').html(`<img src="https://httpstatusdogs.com/img/404.jpg" alt="error - no dogs found">`);
 }
 
 function onPageLoad() {
