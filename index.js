@@ -50,7 +50,7 @@ function generateBreed(breedSelection) {
     fetch(`https://dog.ceo/api/breed/${breedSelection}/images/random`)
         .then(response => response.json())
         .then(responseJson => renderBreedImages(responseJson))
-        // .catch(error => generateError());
+        .catch(generateError());
 }
 
 function renderBreedImages(responseJson) {
