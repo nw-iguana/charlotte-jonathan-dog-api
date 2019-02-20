@@ -11,6 +11,19 @@ main {
     max-width: 1000px;
     margin: 50px auto;
     background-color: #fafafa;
-    margin: 10px;
+    padding: 30px;
+}
+
+form {
+    padding: 50px 10px 10px 10px;
+}
+
+.dog-images img {
+    max-height: 200px;
+    padding: 10px;
+}
+
+.breed-images img {
+    max-height: 200px;
     padding: 10px;
 }

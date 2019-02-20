@@ -50,11 +50,10 @@ function generateBreed(breedSelection) {
     fetch(`https://dog.ceo/api/breed/${breedSelection}/images/random`)
         .then(response => response.json())
         .then(responseJson => renderBreedImages(responseJson))
-        .catch(error => generateError());
+        // .catch(error => generateError());
 }
 
 function renderBreedImages(responseJson) {
-    console.log(responseJson);
     let html = `<img src="${responseJson.message}" alt="randomly generated dog breed image">`;
     $('.breed-images').html(html);
 }
