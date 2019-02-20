@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
 </head>
 <body>
     
-    <main>
-        <header>
-            <h1>Dog App</h1>
+    <main role="main">
+        <header role="header">
+            <h1>Dog API App</h1>
         </header>
 
         <form class="dog-generator">
@@ -24,8 +24,13 @@
             <input type="submit" value="Show me a dog">
         </form>
 
-        <section>
+        <section class="dog-images">
         </section>
+
+        <form class="breed-generator">
+            <input type="text" id="dog-breed" name="dog-breed" placeholder="Hound">
+            <input type="submit" value="Show me a dog">
+        </form>
     </main>
 
 
